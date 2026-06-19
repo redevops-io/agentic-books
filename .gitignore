@@ -4,3 +4,5 @@ _brief.md
 node_modules/
 __pycache__/
 *.pyc
+
+.sidekick*
