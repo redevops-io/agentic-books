@@ -1,7 +1,14 @@
 """Variance analysis agent."""
 
+from decimal import Decimal
+
+
 class VarianceAgent:
     """Agent for variance analysis."""
 
     def analyze(self, actual: float, budget: float) -> dict:
-        return {"variance": actual - budget, "pct": (actual - budget) / budget if budget else 0}
+        actual = Decimal(str(actual))
+        budget = Decimal(str(budget))
+        variance = actual - budget
+        pct = variance / budget if budget else Decimal(0)
+        return {"variance": variance, "pct": pct}
