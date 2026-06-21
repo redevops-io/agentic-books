@@ -1,4 +1,0 @@
-openai
-git+https://github.com/redevops-io/agent-harness.git
-beancount
-requests
